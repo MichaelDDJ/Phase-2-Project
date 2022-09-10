@@ -1,0 +1,34 @@
+{
+  "workouts": [
+    {
+      "id" : 1,
+      "workout" : "pushups",
+      "type" : "upper"
+    },
+    {
+      "id" : 2,
+      "workout" : "jumping jax",
+      "type" : "full"
+    },
+    {
+      "id" : 3,
+      "workout" : "squats",
+      "type" : "lower"
+    },
+    {
+      "id" : 4,
+      "workout" : "lunges",
+      "type" : "lower"
+    },
+    {
+      "id" : 5,
+      "workout" : "burpees",
+      "type" : "full"
+    },
+    {
+      "id" : 6,
+      "workout" : "planks",
+      "type" : "upper"
+    }
+  ]
+}
