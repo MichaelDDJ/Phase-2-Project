@@ -13,7 +13,16 @@
   }
 }
 
-.App-header {
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+
+}
+
+.body {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -22,6 +31,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  width: 50%;
 }
 
 .App-link {

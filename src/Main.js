@@ -8,7 +8,7 @@ function Main ({workouts}) {
     })
 
     return (
-        <div>
+        <div className="body">
             {workoutList}
         </div>
     )
