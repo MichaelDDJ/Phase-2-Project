@@ -2,7 +2,10 @@ import './App.css';
 import React, {useEffect, useState} from 'react';
 import Header from './Header';
 import Main from './Main';
+import NavBar from './NavBar';
 import {Switch, Link, Route} from "react-router-dom";
+import WorkoutList from './WorkoutList';
+import MyWorkouts from './MyWorkouts';
 
 function App() {
 
@@ -18,8 +21,22 @@ function App() {
 
   return (
     <div className="App">
+      <NavBar />
       <Header />
-      <Main workouts={workouts} />
+      <Switch>
+        <Route path="/">
+          <Home />
+        </Route>
+        <Route path="">
+          <WorkoutList workouts={workouts}/>
+        </Route>
+        <Route path="">
+          <MyWorkouts />
+        </Route>
+        <Route path="">
+
+        </Route>
+      </Switch>
     </div>
   );
 }
