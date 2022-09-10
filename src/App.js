@@ -1,11 +1,11 @@
 import './App.css';
 import React, {useEffect, useState} from 'react';
+import { Route } from 'react-router-dom';
 import Header from './Header';
-import Main from './Main';
 import NavBar from './NavBar';
-import {Switch, Link, Route} from "react-router-dom";
 import WorkoutList from './WorkoutList';
 import MyWorkouts from './MyWorkouts';
+import Home from './Home';
 
 function App() {
 
@@ -27,13 +27,13 @@ function App() {
         <Route path="/">
           <Home />
         </Route>
-        <Route path="">
+        <Route path="WorkoutList">
           <WorkoutList workouts={workouts}/>
         </Route>
-        <Route path="">
+        <Route path="MyWorkouts">
           <MyWorkouts />
         </Route>
-        <Route path="">
+        <Route path="WorkoutForm">
 
         </Route>
       </Switch>
