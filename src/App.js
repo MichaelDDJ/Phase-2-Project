@@ -38,13 +38,14 @@ function App() {
     function addWorkout () {
       let addedWorkout = workouts.filter((workout) => workout.workout === x)
       setFilteredWorkouts([...filteredWorkouts, addedWorkout].flat())
+      alert("Workout added to My Workouts list!")
     }
     
     if (filteredWorkouts.length == 0) {
       addWorkout()
     } else {
       let workoutCheck = filteredWorkouts.find(element => element.workout === x)
-      workoutCheck === undefined ? addWorkout() : alert('Itemalready added')
+      workoutCheck === undefined ? addWorkout() : alert('Item already added')
     }
 
   }
