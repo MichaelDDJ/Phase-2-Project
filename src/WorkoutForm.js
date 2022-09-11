@@ -10,7 +10,7 @@ function WorkoutForm () {
                 <br></br>
                 <input type="text" placeholder="Enter workout type..."></input>
                 <br></br>
-                <button>Submit new workout</button>
+                <button >Submit new workout</button>
             </form>
         </div>
         
