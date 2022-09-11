@@ -13,7 +13,7 @@
   }
 }
 
-.header {
+.header2 {
   padding: 60px;
   text-align: center;
   background: #ffffff;
@@ -22,7 +22,7 @@
 
 }
 
-.workoutList {
+.workoutList2 {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -35,7 +35,7 @@
   float: left;
 }
 
-.myWorkouts {
+.myWorkouts2 {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;

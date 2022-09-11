@@ -1,11 +1,12 @@
 import './App.css';
 import React, {useEffect, useState} from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Routes, Link } from 'react-router-dom';
 import Header from './Header';
 import NavBar from './NavBar';
 import WorkoutList from './WorkoutList';
 import MyWorkouts from './MyWorkouts';
 import Home from './Home';
+import WorkoutForm from './WorkoutForm';
 
 function App() {
 
@@ -23,20 +24,12 @@ function App() {
     <div className="App">
       <NavBar />
       <Header />
-      <Switch>
-        <Route path="/">
-          <Home />
-        </Route>
-        <Route path="WorkoutList">
-          <WorkoutList workouts={workouts}/>
-        </Route>
-        <Route path="MyWorkouts">
-          <MyWorkouts />
-        </Route>
-        <Route path="WorkoutForm">
-
-        </Route>
-      </Switch>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/WorkoutList" element={<WorkoutList workouts={workouts} />} />
+        <Route path="/MyWorkouts" element={<MyWorkouts />} />
+        <Route path="/WorkoutForm" element={<WorkoutForm />} />
+      </Routes>
     </div>
   );
 }
