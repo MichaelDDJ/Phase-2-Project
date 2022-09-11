@@ -11,12 +11,17 @@ import WorkoutForm from './WorkoutForm';
 function App() {
 
   const [workouts, setWorkouts] = useState([])
+  const [filteredWorkouts, setFilteredWorkouts] = useState([])
 
   useEffect(() => {
     fetch("http://localhost:3000/workouts")
     .then((r) => r.json())
     .then(data => setWorkouts(data))
   }, [])
+
+  handleAddMyWorkout () {
+
+  }
 
   console.log(workouts)
 
@@ -26,8 +31,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/WorkoutList" element={<WorkoutList workouts={workouts} />} />
-        <Route path="/MyWorkouts" element={<MyWorkouts />} />
+        <Route path="/WorkoutList" element={<WorkoutList workouts={workouts} handleAddMyWorkout={handleAddMyWorkout} />} />
+        <Route path="/MyWorkouts" element={<MyWorkouts workouts={workouts} />} />
         <Route path="/WorkoutForm" element={<WorkoutForm />} />
       </Routes>
     </div>
