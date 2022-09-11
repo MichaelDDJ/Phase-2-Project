@@ -1,6 +1,10 @@
 import React from "react";
 
-function MyWorkouts () {
+function MyWorkouts ({filteredWorkouts}) {
+
+    const myWorkoutLIst = filteredWorkouts.filter((workout) => {
+        
+    })
 
     return (
         <div className="myWorkouts">

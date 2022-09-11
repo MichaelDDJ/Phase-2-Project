@@ -12,6 +12,7 @@ function App() {
 
   const [workouts, setWorkouts] = useState([])
   const [filteredWorkouts, setFilteredWorkouts] = useState([])
+  const [myWorkoutList , setMyWorkoutList] = useState([])
 
   useEffect(() => {
     fetch("http://localhost:3000/workouts")
@@ -34,11 +35,18 @@ function App() {
     }
 
 
-    setFilteredWorkouts([...filteredWorkouts, workouts.filter((workout) => {
-      return workout.workout == x
-    })].flat())
+    function addWorkout () {
+      let addedWorkout = workouts.filter((workout) => workout.workout === x)
+      setFilteredWorkouts([...filteredWorkouts, addedWorkout].flat())
+    }
+    
+    if (filteredWorkouts.length == 0) {
+      addWorkout()
+    } else {
+      let workoutCheck = filteredWorkouts.find(element => element.workout === x)
+      workoutCheck === undefined ? addWorkout() : alert('Itemalready added')
+    }
 
-    console.log(filteredWorkouts)
   }
 
   return (
