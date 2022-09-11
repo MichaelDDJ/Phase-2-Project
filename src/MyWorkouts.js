@@ -1,12 +1,10 @@
 import React from "react";
 import Workout from "./Workout";
 
-function MyWorkouts ({filteredWorkouts}) {
-
-    console.log(filteredWorkouts)
+function MyWorkouts ({filteredWorkouts, handleDelete}) {
 
     const myWorkoutList = filteredWorkouts.map((workout) => {
-        return <Workout key={workout.id} name={workout.workout} type={workout.type} />
+        return <Workout key={workout.id} name={workout.workout} type={workout.type} func={handleDelete} />
     })
 
     return (
