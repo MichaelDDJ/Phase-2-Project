@@ -13,6 +13,8 @@ function App() {
   const [workouts, setWorkouts] = useState([])
   const [filteredWorkouts, setFilteredWorkouts] = useState([])
   const [myWorkoutList , setMyWorkoutList] = useState([])
+  const [name, setName] = useState("")
+  const [type, setType] = useState("")
 
   useEffect(() => {
     fetch("http://localhost:3000/workouts")
@@ -71,6 +73,12 @@ function App() {
     setFilteredWorkouts(q)
   }
 
+  function handleSubmit (event) {
+    event.preventDefault();
+    fetch("http://localhost:3000/workouts")
+
+  }
+
   return (
     <div className="App">
       <NavBar />
@@ -79,7 +87,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/WorkoutList" element={<WorkoutList workouts={workouts} handleWorkoutClick={handleWorkoutClick} />} />
         <Route path="/MyWorkouts" element={<MyWorkouts filteredWorkouts={filteredWorkouts} handleDelete={handleDelete} />} />
-        <Route path="/WorkoutForm" element={<WorkoutForm />} />
+        <Route path="/WorkoutForm" element={<WorkoutForm name={name} setName={setName} type={type} setType={setType} />} />
       </Routes>
     </div>
   );
