@@ -19,11 +19,27 @@ function App() {
     .then(data => setWorkouts(data))
   }, [])
 
-  handleAddMyWorkout () {
+  function handleWorkoutClick (event) {
+    let x;
 
+    switch (event.target.className) {
+      case "workout": x = event.target.firstChild.textContent;
+        break;
+      case "workout-name": x = event.target.textContent;
+        break;
+      case "workout-type": x = event.target.previousSibling.textContent;
+        break;
+      default: alert("There was an error. Please refresh or try again.");
+        break;
+    }
+
+
+    setFilteredWorkouts([...filteredWorkouts, workouts.filter((workout) => {
+      return workout.workout == x
+    })].flat())
+
+    console.log(filteredWorkouts)
   }
-
-  console.log(workouts)
 
   return (
     <div className="App">
@@ -31,8 +47,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/WorkoutList" element={<WorkoutList workouts={workouts} handleAddMyWorkout={handleAddMyWorkout} />} />
-        <Route path="/MyWorkouts" element={<MyWorkouts workouts={workouts} />} />
+        <Route path="/WorkoutList" element={<WorkoutList workouts={workouts} handleWorkoutClick={handleWorkoutClick} />} />
+        <Route path="/MyWorkouts" element={<MyWorkouts workouts={workouts} filteredWorkouts={filteredWorkouts} />} />
         <Route path="/WorkoutForm" element={<WorkoutForm />} />
       </Routes>
     </div>
