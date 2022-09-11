@@ -8,7 +8,11 @@ function WorkoutForm ({name, type, setName, setType, handleSubmit}) {
             <form onSubmit={handleSubmit}>
                 <input type="text" placeholder="Enter workout name..." onChange={(e) => setName(e.target.value)} value={name} ></input>
                 <br></br>
-                <input type="text" placeholder="Enter workout type..." onChange={(e) => setType(e.target.value)} value={type} ></input>
+                <select id="type select" value={type} onChange={(e) => setType(e.target.value)}>
+                    <option value="upper">upper</option>
+                    <option value="lower">lower</option>
+                    <option value="full">full</option>
+                </select>
                 <br></br>
                 <button>Submit new workout</button>
             </form>
