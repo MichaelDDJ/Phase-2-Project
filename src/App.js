@@ -75,17 +75,19 @@ function App() {
   function handleSubmit (event) {
     event.preventDefault();
 
-    const formData = {id: 0, workout: "some", type: "thing"}
+    const formData = {workout: name, type: type}
 
     fetch("http://localhost:3000/workouts", {
-      method: "POST",
-      headers: {"Content/Type" : "application/json"},
-      body: JSON.stringify({formData})
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(formData)
     })
     .then(r => r.json())
-    .then(data => console.log(data))
+    .then(data => setWorkouts(...workouts, data))
 
   }
+
+  console.log(workouts)
 
   return (
     <div className="App">
