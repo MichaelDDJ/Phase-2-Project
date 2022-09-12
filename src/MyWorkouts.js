@@ -8,7 +8,7 @@ function MyWorkouts ({filteredWorkouts, handleDelete}) {
     })
 
     return (
-        <div className="myWorkouts">
+        <div className="my-workouts">
             <h1>MyWorkouts</h1>
             {myWorkoutList}
         </div>

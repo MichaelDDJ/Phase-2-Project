@@ -9,7 +9,7 @@ function WorkoutList ({workouts, handleWorkoutClick}) {
     })
 
     return (
-        <div className="workoutList">
+        <div className="workout-list">
             <h1>WorkoutList</h1>
             {workoutList}
         </div>

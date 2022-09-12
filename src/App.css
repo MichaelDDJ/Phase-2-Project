@@ -14,16 +14,7 @@
   }
 }
 
-.header2 {
-  padding: 60px;
-  text-align: center;
-  background: #ffffff;
-  color: rgb(0, 0, 0);
-  font-size: 30px;
-
-}
-
-.workoutList2 {
+.workout-form {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -32,11 +23,36 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  width: 50%;
-  float: left;
 }
 
-.myWorkouts2 {
+#input {
+  border : outset;
+  border-radius: 20px;
+  border-color: rgb(142, 159, 190);
+  padding-right: 50px;
+  padding-left: 50px;
+  color: white;
+}
+
+#type-select {
+  border : outset;
+  border-radius: 20px;
+  border-color: rgb(142, 159, 190);
+  padding-right: 50px;
+  padding-left: 50px;
+  color: white;
+}
+
+#btn {
+  border : outset;
+  border-radius: 20px;
+  border-color: rgb(142, 159, 190);
+  padding-right: 50px;
+  padding-left: 50px;
+  color: white;
+}
+
+.workout-list {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -45,8 +61,35 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  width: 50%;
-  float: right;
+}
+
+.my-workouts {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.workout {
+  border : outset;
+  border-radius: 20px;
+  border-color: rgb(142, 159, 190);
+  padding-right: 50px;
+  padding-left: 50px;
+  width: 25%
+}
+
+.navlink {
+  border: solid;
+  padding-top: 5px;
+  padding-right: 40px;
+  padding-bottom: 5px;
+  padding-left: 40px;
+  color: white;
 }
 
 .App-link {

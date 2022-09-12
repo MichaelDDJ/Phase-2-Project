@@ -5,10 +5,10 @@ function NavBar () {
     
     return (
         <div>
-            <NavLink to="/" style={{color: "blueviolet"}}>Home</NavLink>
-            <NavLink to="/WorkoutList" >WorkoutList</NavLink>
-            <NavLink to="/MyWorkouts" >MyWorkouts</NavLink>
-            <NavLink to="/WorkoutForm" >WorkoutForm</NavLink>
+            <NavLink to="/" className={"navlink"} >Home</NavLink>
+            <NavLink to="/WorkoutList" className={"navlink"} >WorkoutList</NavLink>
+            <NavLink to="/MyWorkouts" className={"navlink"} >MyWorkouts</NavLink>
+            <NavLink to="/WorkoutForm" className={"navlink"} >WorkoutForm</NavLink>
         </div>
     )
 
