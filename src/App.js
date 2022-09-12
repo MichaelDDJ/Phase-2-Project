@@ -1,6 +1,6 @@
 import './App.css';
 import React, {useEffect, useState} from 'react';
-import { Route, Routes, Link } from 'react-router-dom';
+import { Route, Routes, useNavigate} from 'react-router-dom';
 import Header from './Header';
 import NavBar from './NavBar';
 import WorkoutList from './WorkoutList';
@@ -13,7 +13,10 @@ function App() {
   const [workouts, setWorkouts] = useState([])
   const [filteredWorkouts, setFilteredWorkouts] = useState([])
   const [name, setName] = useState("")
-  const [type, setType] = useState("")
+  const [type, setType] = useState("upper")
+
+  const navigate = useNavigate()
+  console.log(workouts)
 
   useEffect(() => {
     fetch("http://localhost:3000/workouts")
@@ -42,7 +45,7 @@ function App() {
       alert("Workout added to My Workouts list!")
     }
     
-    if (filteredWorkouts.length == 0) {
+    if (filteredWorkouts.length === 0) {
       addWorkout()
     } else {
       let workoutCheck = filteredWorkouts.find(element => element.workout === x)
@@ -83,7 +86,10 @@ function App() {
       body: JSON.stringify(formData)
     })
     .then(r => r.json())
-    .then(data => setWorkouts(...workouts, data))
+    .then(data => setWorkouts([...workouts, data].flat()))
+
+    
+    navigate.push("../WorkoutList")
 
   }
 

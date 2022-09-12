@@ -5,7 +5,7 @@ function NavBar () {
     
     return (
         <div>
-            <NavLink to="/" >Home</NavLink>
+            <NavLink to="/" style={{color: "blueviolet"}}>Home</NavLink>
             <NavLink to="/WorkoutList" >WorkoutList</NavLink>
             <NavLink to="/MyWorkouts" >MyWorkouts</NavLink>
             <NavLink to="/WorkoutForm" >WorkoutForm</NavLink>
