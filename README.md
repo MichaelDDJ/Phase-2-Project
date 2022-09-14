@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# Phase 2 Project
+
+This repository contains all the necessary files for the project. A file, db.json, needs to be ran along with the app itself in a separate port. All server requests sent to db.json. It is a single page application using react to showcase components and client-side routing.
+
+This app also uses v6 of react-router-dom.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
